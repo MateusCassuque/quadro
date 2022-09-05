@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSV</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/navstyle.css">
+    <link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css">
+
+    <!--link para O javaScript bootstrap da pagina-->
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg  navbar-dark" id="nav">
+    <button id="botao" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="/">DSV</a>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home </span></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/contacto"> Entrar em contacto </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Login</a>
+        </li>
+      </ul>
+    <!-- 
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+      
+    </div>
+  </nav>
+      
+<div class="interface">
+
+  <div id="carouselExampleIndicators" class="carousel slide m-0 p-0 col-12" data-bs-ride="carousel">
+        
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="./img/Slid/image_downloader_1661001494118.jpg" alt="First slide">
+    
+        <div class=" legenda">
+          <h2>dev-cute</h2>
+          <p>soluções de viagens</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./img/Slid/janelaDeAviao.png" alt="Second slide">
+        
+        <div class=" legenda">
+          <h2>A melhor consultória</h2>
+          <p>para o teu bolso.</p>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./img/Slid/image_downloader_1661001408415.jpg" alt="Second slide">
+        <div class=" legenda">
+            <h2> Evite estresse! </h2>
+            <p>Nós cuidamos do teu processo.</p>
+        </div>
+      </div>
+    
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only d-none d-md-block">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="bs-only d-none d-md-block">Next</span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+
+
+  <h3 id="ofertaH3" class="m-4">Serviços</h3>
+  <h5 id="ofertaH5" class="m-4">Consultoria para pedido de Visto nas seguintes categórias:</h5>
+  
+  <div class="row col-11" id="servicos">
+    <% servicos.forEach(servico => { %>
+    <div class="card" style="width: 33rem; margin: 15px;">
+      
+      <% if(servico.name == 'Visto de Turismo'){ %>
+        <img class="card-img-top" src="/img/Slid/image_downloader_1661001390616.jpg" alt="Turismo">
+      <% } else if(servico.name == 'Visto de Estudo') { %>    
+        <img class="card-img-top" src="/img/Slid/consuloriaCard.jpg" alt="Estudo">
+      <% } else if(servico.name == 'Visto de Saúde'){ %>
+        <img class="card-img-top" src="/img/Slid/image_downloader_1661001512312.jpg" alt="Saúde">
+      <% } %>
+       
+      <div class="card-body">
+        <h5 class="card-title"> <%=servico.name %> </h5>
+        <p class="card-text">
+          Acompnhãmos o teu processo desde o Agendamento até a resposta do Consulado.
+        </p>
+        <p>Cuidamos de Tudo, excepto o seguro por apenas <strong class="text-success"> <%=servico.preco %> </strong> </p>
+        
+        <a href="" class="btn btn-primary">Reservar</a>
+      </div>  
+    </div>
+    <% }) %>
+
+  </div>
+  
+  <h3 id="ofertaH3" class="m-4">Sub-Serviços:</h3>
+
+  
+  <div class="row col-11" id="subServicos">
+    <% subServicos.forEach(servico => { %>
+    <div class="card text-bg-success mb-3 border-success m-2">
+      
+      <div class="card-header">Solicitação</div>
+      
+      <div class="card-body">
+        <h5 class="card-title"> (<%=servico.tipo %>) </h5>
+        <p class="card-text">por apenas: <strong class="text-success"> <%=servico.preco %> </strong> </p>
+
+        <a href="" class="btn btn-success">Reser var</a>
+
+      </div>
+
+    </div> 
+    <% }) %>
+  </div>
+  
+
+</div>
+      <script src="./assets/dist/js/bootstrap.min.js"></script>
+      <script src="./assets/dist/jquery/dist/jquery.min.js"></script>
+</body>
+</html>

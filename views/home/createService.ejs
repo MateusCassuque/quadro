@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/navstyle.css">
+
+    <!--link para O javaScript bootstrap da pagina-->
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg  navbar-dark" id="nav">
+        <button id="botao" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="/">DSV</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home </span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">Create Service</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
+        <!-- 
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+          
+        </div>
+      </nav>
+      
+
+    <div class="" id="formCreate">
+        <h1>Criar Serviço</h1>
+
+        <form action="/" class="col-8" method="post">
+            <div class="form-group opsao">
+                <label for="nome">Nome</label>
+                <select name="nome" id="nome" class="form-control">
+                    <option value="Visto de Turismo">Visto de Turismo</option>
+                    <option value="Visto de Estudo">Visto de Estudo</option>
+                    <option value="Visto de Saúde">Visto de Saúde</option>
+                </select>
+            </div>
+            
+            <!-- <div class="form-group opsao">
+                <label for="nome">Preço: </label>
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome do Serviço">
+            </div> -->
+
+
+            <div class="form-group opsao">
+                <label for="preco">Preço: </label>
+                <input type="text" name="preco" id="preco" class="form-control" placeholder="Preço do Serviço">
+            </div>
+
+
+            <!--     
+            <div class="form-group opsao">
+                <label for="local">Endereço:</label>
+                <input type="text" name="local" id="local" class="form-control" placeholder="Província / munincípio / bairro / rua">
+            </div>
+     -->
+    
+                <!-- <div class="form-group opsao">
+                    <label for="description">Descrição:</label>
+                    <textarea type="text" name="description" id="description" class="form-control" placeholder="Sobre a escola"></textarea>
+                </div>
+     -->
+                <!-- <div class="form-group opsao">
+                    <label for="itens">Extracurricular:</label>
+                    <div class="form-group">
+                        <input type="checkbox" name="itens[]" value = "Educação Física"> Educação Física
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="itens[]" value = "Campionato Escolar"> Campionato Escolar
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="itens[]" value = "Aula de Natação"> Aula de Natação
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="itens[]" value = "Curso de Planos de feria"> Curso de Planos de feria
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="itens[]" value = "Acampamento Escolar"> Acampamento Escolar
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="itens[]" value = "Festival de Música"> Festival de Música
+                    </div>
+                </div> -->
+    
+                <d d ="botao"iv class="form-group opsao">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary large m-4" >
+                    <a href="/">Início</a>
+                </div>
+            </form>
+        
+    </div>
+
+
+
+    <script src="./assets/dist/js/bootstrap.min.js"></script>
+    <script src="./assets/dist/jquery/dist/jquery.min.js"></script>
+
+</body>
+</html>

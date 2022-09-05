@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Service</title>
+    
+    <link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css">
+
+    <!--link para O javaScript bootstrap da pagina-->
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <% if(servico){ %>    
+    <div class="row col-11" id="servicos">
+        <div class="card" style="width: 33rem; margin: 15px;">
+          
+          <% if(servico.name == 'Visto de Turismo'){ %>
+            <img class="card-img-top" src="/img/Slid/image_downloader_1661001390616.jpg" alt="Turismo">
+          <% } else if(servico.name == 'Visto de Estudo') { %>    
+            <img class="card-img-top" src="/img/Slid/consuloriaCard.jpg" alt="Estudo">
+          <% } else if(servico.name == 'Visto de Saúde'){ %>
+            <img class="card-img-top" src="/img/Slid/image_downloader_1661001512312.jpg" alt="Saúde">
+          <% } %>
+           
+          <div class="card-body">
+            <h5 class="card-title"> <%=servico.name %> </h5>
+            <p class="card-text">
+              Acompahãmos o teu processo desde o Agendamento até a resposta do Consulado.
+            </p>
+            <p>Cuidamos de Tudo, excepto o seguro por apenas <strong class="text-success"> <%=servico.preco %> </strong> </p>
+            <a href="" class="btn btn-primary">Reservar</a>
+          </div>  
+        </div>
+    </div>
+    <% } %>
+
+      <script src="./assets/dist/js/bootstrap.min.js"></script>
+      <script src="./assets/dist/jquery/dist/jquery.min.js"></script>
+</body>
+</html>

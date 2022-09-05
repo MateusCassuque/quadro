@@ -26,12 +26,12 @@ class Servico {
         return servicosList
     }
 
-    static findById(id){
+    static findById(name){
         const servicos = Servico.find()
         var servico = null
 
         servicos.forEach( s => {
-            if(s.id == 1){
+            if(s.name == name){
                 servico = s
             }
         })

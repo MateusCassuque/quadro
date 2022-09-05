@@ -65,16 +65,8 @@ router.post('/', async (req, res) => {
     
 })
 
-router.post('/authenticate', async (req, res) => {
-    
-
-})
-
-router.get('/service', async (req, res) => {
-  const servico = Servico.findById(1)
-
-  console.log(servico)
-
+router.get('/service/:servicoName', async (req, res) => {
+  const servico = Servico.findById(req.params.servicoName)
   res.render('service', { servico })
 })
 

@@ -65,3 +65,11 @@
         font-size: 30px;
     }
 }
+
+#servicos .card{
+    border: none;
+}
+
+#servicos .card .card-body{
+    border-bottom: solid 0.1px rgba(0, 0, 0, 0.286);
+}

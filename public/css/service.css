@@ -1,0 +1,7 @@
+#principal .card{
+    border: none;
+}
+
+#principal .card .card-body{
+    border-bottom: solid 0.1px rgba(0, 0, 0, 0.286);
+}

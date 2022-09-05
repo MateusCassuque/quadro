@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="css/navstyle.css">
-    <link rel="stylesheet" href="./assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
 
     <!--link para O javaScript bootstrap da pagina-->
-    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
@@ -36,11 +36,6 @@
           <a class="nav-link" href="/register">Login</a>
         </li>
       </ul>
-    <!-- 
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
       
     </div>
   </nav>
@@ -117,8 +112,20 @@
         </p>
         <p>Cuidamos de Tudo, excepto o seguro por apenas <strong class="text-success"> <%=servico.preco %> </strong> </p>
         
-        <a href="" class="btn btn-primary">Reservar</a>
-      </div>  
+        <div class="card-actions">
+          <% if(servico.name == 'Visto de Turismo'){ %>
+            <a href="./service/Visto de Turismo" class="btn btn-primary">Reservar</a>
+          <% } else if(servico.name == 'Visto de Estudo') { %>    
+            <a href="./service/Visto de Estudo" class="btn btn-primary">Reservar</a>
+          <% } else if(servico.name == 'Visto de Saúde'){ %>
+            <a href="./service/Visto de Saúde" class="btn btn-primary">Reservar</a>
+          <% } %>
+        </div>
+      </div>
+        
+      <div class="card-footer">
+        <p>Estada inferior a 90 dias</p>
+      </div>
     </div>
     <% }) %>
 
@@ -137,7 +144,7 @@
         <h5 class="card-title"> (<%=servico.tipo %>) </h5>
         <p class="card-text">por apenas: <strong class="text-success"> <%=servico.preco %> </strong> </p>
 
-        <a href="" class="btn btn-success">Reser var</a>
+        <a href="#" class="btn btn-success">Reservar</a>
 
       </div>
 
@@ -147,7 +154,7 @@
   
 
 </div>
-      <script src="./assets/dist/js/bootstrap.min.js"></script>
-      <script src="./assets/dist/jquery/dist/jquery.min.js"></script>
+      <script src="/assets/dist/js/bootstrap.min.js"></script>
+      <script src="/assets/dist/jquery/dist/jquery.min.js"></script>
 </body>
 </html>

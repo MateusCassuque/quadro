@@ -8,7 +8,7 @@
     "dev": "nodemon app.js",
     "start": "node app.js"
   },
-  "author": "DEV'CUTE",
+  "author": "MATEUS CASSUQUE",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",

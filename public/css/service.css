@@ -5,3 +5,18 @@
 #principal .card .card-body{
     border-bottom: solid 0.1px rgba(0, 0, 0, 0.286);
 }
+
+#card-form .obrigatorio,
+#aviso{
+    color: red;
+    text-align: end;
+    margin: 10px;
+}
+
+#card-form{
+    opacity: 0;
+}
+
+#card-form p{
+    text-transform: uppercase;
+}

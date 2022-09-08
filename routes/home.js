@@ -3,6 +3,22 @@ const express = require('express')
 const router = express.Router();
 const Servico = require('../models/Servico')
 
+
+const num2 = 150000
+let valorNum = num2.toLocaleString('pt-AO', {style: 'currency', currency: 'AOA'})
+
+const novoServico3 = new Servico('Visto de Saúde', valorNum)
+
+const num1 = 100000
+valorNum = num1.toLocaleString('pt-AO', {style: 'currency', currency: 'AOA'})
+
+const novoServico2 = new Servico('Visto de Estudo', valorNum)
+ 
+const num = 75000
+valorNum = num.toLocaleString('pt-AO', {style: 'currency', currency: 'AOA'})
+
+const novoServico1 = new Servico('Visto de Turismo', valorNum)
+
 const subServicosCro = [
   {
     tipo: 'Agendamento',
@@ -38,6 +54,7 @@ router.get('/', async (req,res) => {
   if(subServicos.length == 0){
     preench()
   }
+
   const servicos = Servico.find().reverse()
 
   res.render('home', {subServicos, servicos})

@@ -66,8 +66,8 @@
 
 
   <h3 id="ofertaH3" class="m-4">Serviços</h3>
-  <h5 id="ofertaH5" class="m-4">Consultoria para pedido de Visto nas seguintes categórias:</h5>
-  
+  <h5 id="ofertaH5" class="m-4">Consultória para pedido de Visto nas seguintes categórias:</h5>
+
   <div class="row col-11" id="servicos">
     <% servicos.forEach(servico => { %>
     <div class="card" style="width: 33rem; margin: 15px;">
@@ -82,19 +82,19 @@
        
       <div class="card-body">
         <h5 class="card-title"> <%=servico.name %> </h5>
-        <p class="card-text">
-          Acompnhãmos o teu processo desde o Agendamento até a resposta do Consulado.
-        </p>
-        <p>Cuidamos de Tudo, excepto o seguro por apenas <strong class="text-success"> <%=servico.preco %> </strong> </p>
+        <p class="text-muted"> (Paises: Portugal, França, Espanhã, EUA & Brazil) </p>
         
+        <div class="card-text">
+          <p>
+          Acompanhamos o teu processo desde o Agendamento até a resposta do Consulado.
+          </p>
+
+          <p> Uma boa organização do processo, não garante o visto mas, te coloca um passo afrente! </p>
+          <p> Ajude-nos a te ajudar. clica em <span class="text-success">ver mais</span> </p>
+        </div>
+
         <div class="card-actions">
-          <% if(servico.name == 'Visto de Turismo'){ %>
-            <a href="./service/Visto de Turismo" class="btn btn-primary">Reservar</a>
-          <% } else if(servico.name == 'Visto de Estudo') { %>    
-            <a href="./service/Visto de Estudo" class="btn btn-primary">Reservar</a>
-          <% } else if(servico.name == 'Visto de Saúde'){ %>
-            <a href="./service/Visto de Saúde" class="btn btn-primary">Reservar</a>
-          <% } %>
+            <a href="./service/<%=servico.name%>" class="btn btn-primary">Ver Mais</a>
         </div>
       </div>
         

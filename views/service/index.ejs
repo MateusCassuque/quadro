@@ -15,7 +15,7 @@
 <body>
   <%- include('../layout/navbar') %>
 
-  <div class="row col-11 offset-md-1" id="principal">
+  <div class="row col-12 col-md-11 offset-md-1" id="principal">
     <% if(servico){ %>
       <div class="card col-md-6 m-2">
           <% if(servico.name == 'Visto de Turismo'){ %>
@@ -28,7 +28,7 @@
           
           <div class="card-body">
             <h3 class="card-title"> <%=servico.name %> </h3>
-            <p class="card-subtitle mb-4">Estada inferior a 90 dia</p>
+            <p class="card-subtitle mb-2">Estada inferior a 90 dia</p>
           
             <h5 class="card-header">Cuidamos de:</h5>
             <ul>
@@ -36,10 +36,17 @@
               <li>Comprovativo de Alojamento</li>
               <li>Reserva de Vôo</li>
               <li>Formulário</li>
+              
+              <% if(servico.name == 'Visto de Estudo'){ %>
+                <li> Inscrição em uma Escola </li>
+              <% } else if(servico.name == 'Visto de Saúde'){ %>
+                <li> Marcação de Consulta </li>
+              <% } %>
+
               <li>Declarações e todos os termos necessário, incluindo a melhor consultória para o teu bolso</li>
             </ul>
 
-            <p class="reservar">Cuidamos de Tudo, excepto o seguro por apenas <strong class="text-success"> <%=servico.preco %> </strong> </p>
+            <p class="reservar">Cuidamos de Tudo por apenas <strong class="text-success"> <%=servico.preco %> </strong> </p>
             <a onclick="reservar()" class="btn btn-success reservar">Reservar</a>
           </div>
     </div>
@@ -60,35 +67,35 @@
             
             <div class="col-6 form-group">
               <label for="name">Nome:</label>
-              <input type="text" name="name" id="name" placeholder="Digite seu nome" class="form-control"><span class="obrigatorio">*</span>
+              <input type="text" name="name" id="name" placeholder="nome proprio" class="form-control"><span class="obrigatorio">*</span>
             </div>
             
             <div class="col-6 form-group">
               <label for="apelido">Apelido:</label>
-              <input type="text" name="apelido" id="apelido" placeholder="Digite seu Apelido" class="form-control"> <span class="obrigatorio">*</span>
+              <input type="text" name="apelido" id="apelido" placeholder="Apelido" class="form-control"> <span class="obrigatorio">*</span>
             </div>
 
             <label for="name">Contacto:</label>
             
-            <div class="col-6 form-group">
-              <input type="text" name="telefone" id="telefone" placeholder="Digite seu telefone" class="form-control"><span class="obrigatorio">*</span>
+            <div class="col-md-6 form-group">
+              <input type="text" name="telefone" id="telefone" placeholder="telefone: +244 999 999 999" class="form-control"><span class="obrigatorio">*</span>
             </div>
 
-            <div class="form-group col-6">
-              <input type="text" name="email" id="email" placeholder="Digite seu email" class="form-control"><span class="obrigatorio">*</span>
+            <div class="form-group col-md-6">
+              <input type="text" name="email" id="email" placeholder="Email: exemplo@gmail.com" class="form-control"><span class="obrigatorio">*</span>
             </div>
 
-            <div class="col-6 form-group">
+            <div class="col-md-6 form-group">
               <label for="bi">BI:</label>
               <input type="file" name="bi" id="bi" class="form-control"> <span class="obrigatorio">*</span>
             </div>
             
-            <div class="col-6 form-group">
+            <div class="col-md-6 form-group">
               <label for="passaport">Passaport:</label>
               <input type="file" name="passaport" id="passaport" class="form-control"> <span class="obrigatorio">*</span>
             </div> 
             
-            <div class="col-6 form-group">
+            <div class="col-md-6 form-group">
               <label for="ultimoVisto">Foto do último Visto, caso tenha!:</label>
               <input type="file" name="ultimoVisto" id="ultimoVisto" class="form-control">
             </div> 

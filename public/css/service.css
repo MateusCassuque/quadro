@@ -1,5 +1,6 @@
 #principal .card{
     border: none;
+    margin: 0 auto;
 }
 
 #principal .card .card-body{
@@ -19,4 +20,11 @@
 
 #card-form p{
     text-transform: uppercase;
+    font-size: 12px;
+}
+
+@media(min-width: 720px){
+    #card-form p{
+        font-size: 16px;
+    }
 }

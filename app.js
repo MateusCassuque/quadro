@@ -2,8 +2,6 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const morgan = require('morgan')
 
-
-const routes = require('./routes/index')
 const app = express()
 
 app.set('views', __dirname + '/views')

@@ -16,6 +16,7 @@
 
 #card-form{
     opacity: 0;
+    display: none;
 }
 
 #card-form p{

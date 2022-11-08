@@ -13,30 +13,57 @@ class Servico {
     }
  
     static find(){
-        const servicosList = []
-        Servico.servicos.forEach( s => {
-            const servico = {
-                id: s.id,
-                name: s.name,
-                preco: s.preco
-            }
+        try{
+            const servicosList = []
+            Servico.servicos.forEach( s => {
+                const servico = {
+                    id: s.id,
+                    name: s.name,
+                    preco: s.preco
+                }
 
-            servicosList.push(servico)
-        })
-        return servicosList
+                servicosList.push(servico)
+            })
+            return servicosList
+        }catch(error){
+            return {message: 'Error on Find Services!'}
+        }
     }
 
-    static findById(name){
-        const servicos = Servico.find()
-        var servico = null
+    static findById(id){
+        try {
+            const servicos = Servico.find()
+            var servico = null
 
-        servicos.forEach( s => {
-            if(s.name == name){
-                servico = s
-            }
-        })
+            servicos.forEach( s => {
+                if(s.id == id){
+                    servico = s
+                }
+            })
 
-        return servico
+            return servico
+        } catch (error) {
+            return {message: 'Error on Find Service by Id.!'}
+        }
+    }
+
+    
+    static findByIdAndUpdate(id, service){
+        try {
+            const processos = Processo.find()
+
+            processos.forEach( s => {
+                if(s.id == id){
+                    
+                    s.setName = service.name
+                    s.setpreco = service.preco
+
+                    return s
+                }
+            })
+        } catch (error) {
+            return {message: 'Error on update Processo!'}
+        }
     }
 
     set setName (name){

@@ -2,7 +2,11 @@ const express = require('express')
 
 const router = express.Router();
 const Servico = require('../models/Servico')
+const User = require('../models/User')
 
+const { user } = require('../config/userConfig.json')
+
+const userAdmin = new User(user)
 
 const num2 = 150000
 let valorNum = num2.toLocaleString('pt-AO', {style: 'currency', currency: 'AOA'})
@@ -40,7 +44,7 @@ const subServicosCro = [
     preco: 6000,
   },
 
-]
+] 
 const subServicos = []
 
 const preench = (() => {
@@ -65,25 +69,19 @@ router.get('/register', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-  if(subServicos.length == 0){
-    preench()
-  }
 
   const { nome, preco } = req.body
 
-  const num = preco * 1
+  const num = preco * 1 
   const valor = num.toLocaleString('pt-AO', {style: 'currency', currency: 'AOA'})
 
   const novoServico = new Servico(nome, valor)
-
-  const servicos = Servico.find().reverse()
-
-  res.render('home', {subServicos, servicos})
+  res.redirect('/')
     
 })
 
-router.get('/service/:servicoName', async (req, res) => {
-  const servico = Servico.findById(req.params.servicoName)
+router.get('/service/:servicoId', async (req, res) => {
+  const servico = Servico.findById(req.params.servicoId)
   res.render('service', { servico })
 })
 

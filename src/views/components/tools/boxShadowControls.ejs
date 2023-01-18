@@ -1,0 +1,129 @@
+<head>
+    <link rel="stylesheet" href="./css/boxShadowG.css">
+    <script src="./js/boxShadowGenerator.js" defer></script>
+</head>
+
+<body>
+    <div id="boxShadowControls">
+        <h2>Configuração do Box-Shadow:</h2>
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="horizontal">Deslocamento horizontal:</label>
+                <input
+                    type="range" 
+                    name="horizontal" 
+                    id="horizontal" 
+                    min="-1000" 
+                    max="1000"
+                    value="5"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="horizontal-value" id="horizontal-value">
+                <p>px</p>
+            </div>
+        </div>
+        
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="vertical">Deslocamento vertical:</label>
+                <input 
+                    type="range" 
+                    name="vertical" 
+                    id="vertical" 
+                    min="-1000" 
+                    max="1000" 
+                    value="5"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="vertical-value" id="vertical-value">
+                <p>px</p>
+            </div>
+        </div>
+        
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="blur">Intensidade do borrão (Blur):</label>
+                <input 
+                    type="range" 
+                    name="blur" 
+                    id="blur" 
+                    min="0"
+                    max="200" 
+                    value="10"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="blur-value" id="blur-value">
+                <p>px</p>
+            </div>
+        </div>
+        
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="spread">Intensidade do espalhamento (spread):</label>
+                <input 
+                type="range" 
+                name="spread" 
+                id="spread" 
+                min="-100" 
+                max="150" 
+                value="3"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="spread-value" id="spread-value">
+                <p>px</p>
+            </div>
+        </div>
+        
+        
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="color">Cor da sombra:</label>
+                <input 
+                type="color" 
+                name="color" 
+                id="color"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="color-value" id="color-value" style="width: 80px;">
+            </div>
+        </div>
+        
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="alpha">Opacidade:</label>
+                <input 
+                type="range" 
+                name="alpha" 
+                id="alpha"
+                min="0"
+                max="10"
+                value="10"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="alpha-value" id="alpha-value">
+                <p>px</p>
+            </div>
+        </div>
+        
+        
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="inset">sombra Interna:</label>
+                <input type="checkbox" name="inset" id="inset" style="width: 50px;">
+            </div>
+        </div>
+    </div>
+    
+</body>

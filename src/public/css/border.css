@@ -1,0 +1,9 @@
+
+/* Controlers */
+
+.rang-input select{
+    width: max-content;
+    background-color: #e1e1e195;
+    padding: 5px;
+    text-transform: capitalize;
+}

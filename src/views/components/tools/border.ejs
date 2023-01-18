@@ -1,0 +1,74 @@
+<head>
+    <link rel="stylesheet" href="./css/border.css">
+    <script src="./js/borderG.js" defer></script>
+</head>
+    
+<body>
+    <div id="borderControls">
+        <h2>Configuração do Border:</h2>
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="tamanho">Tamanho da borda:</label>
+                <input
+                    type="range" 
+                    name="tamanho" 
+                    id="tamanho" 
+                    min="0" 
+                    max="100"
+                    value="4"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="tamanho-value" id="tamanho-value">
+                <p>px</p>
+            </div>
+        </div>
+        
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="vertical">Tipo:</label>
+                <select name="tipo" id="tipo">
+                    <option value="solid">solid</option>
+                    <option value="dashed">dashed</option>
+                </select>
+            </div>
+        </div>    
+        
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="cborderClor">Cor da borda:</label>
+                <input 
+                type="color" 
+                name="cborderClor" 
+                id="cborderClor"
+                value="#ffffff"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="cborderClor-value" id="cborderClor-value" style="width: 80px;">
+            </div>
+        </div>
+
+        <div class="form-control">
+            <div class="rang-input">
+                <label for="borderAlpha">Opacidade:</label>
+                <input 
+                type="range" 
+                name="borderAlpha" 
+                id="borderAlpha"
+                min="0"
+                max="10"
+                value="10"
+                >
+            </div>
+        
+            <div id="reference-input">
+                <input type="text" name="borderAlpha-value" id="borderAlpha-value">
+                <p>px</p>
+            </div>
+        </div>
+
+    </div>
+</body>
